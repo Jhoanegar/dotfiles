@@ -3,6 +3,7 @@ set noexpandtab
 set autoindent 
 set tabstop=2 shiftwidth=2 expandtab
 set hlsearch
+set number
 retab
 
 colo jellybeans
