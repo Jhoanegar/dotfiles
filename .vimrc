@@ -4,12 +4,19 @@ set autoindent
 set tabstop=2 shiftwidth=2 expandtab
 set hlsearch
 set number
+set showcmd
 retab
 
 colo jellybeans
 
 " Allow a transparent background
 hi Normal ctermbg=NONE
+
+" Correct Typos
+command Wq wq
+command WQ wq
+command W w
+command Q q
 
 " Easier to reach in latin-american keyboards
 let mapleader="ñ"

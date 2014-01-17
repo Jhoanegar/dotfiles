@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/jhoan/rails/sample_app/app/views'
-let g:netrw_dirhist_2='/home/jhoan/rails/sample_app/app/views/layouts'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/jhoan/count_updater/lib'
+let g:netrw_dirhist_2='/home/jhoan/count_updater/lib/count_updater'
+let g:netrw_dirhist_3='/home/jhoan/count_updater/lib'
