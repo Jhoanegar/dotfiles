@@ -7,6 +7,9 @@ set number
 set showcmd
 retab
 
+filetype plugin on
+syntax on
+
 colo jellybeans
 
 " Allow a transparent background
