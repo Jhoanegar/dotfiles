@@ -34,8 +34,9 @@ map <Leader>h :set hlsearch! <cr>
 " Relative number
 map <Leader>n :call ToggleTypeOfNumbering() <cr>
 
-" Insert <%= >
-map <Leader>= i<C-g>s=
+" Insert ruby erb tags
+inoremap <Leader>= <%=  %><Esc>bhi
+inoremap <Leader>- <%  %><Esc>bhi
 
 " Faster than escape for insert mode
 inoremap jj <Esc>
