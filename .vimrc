@@ -5,6 +5,7 @@ set tabstop=2 shiftwidth=2 expandtab
 set hlsearch
 set number
 set showcmd
+set autoread
 retab
 
 filetype plugin on
@@ -33,6 +34,9 @@ map <Leader>h :set hlsearch! <cr>
 
 " Relative number
 map <Leader>n :call ToggleTypeOfNumbering() <cr>
+
+" Reload current file
+map <Leader>r :edit <cr>
 
 " Insert ruby erb tags
 inoremap <Leader>= <%=  %><Esc>bhi
