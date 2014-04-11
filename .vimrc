@@ -29,6 +29,13 @@ let mapleader="ñ"
 " toggle comment
 map <Leader>c gcc
 
+
+" Insert empty line and stay in the same line 
+map <Leader>O <S-O><Esc>
+
+" Insert empty line and go one line down
+map <Leader>o o<Esc>
+
 " toggle hlsearch
 map <Leader>h :set hlsearch! <cr>
 
