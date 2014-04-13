@@ -6,6 +6,7 @@ set hlsearch
 set number
 set showcmd
 set autoread
+set scrolloff=10
 retab
 
 filetype plugin on
@@ -48,6 +49,9 @@ map <Leader>r :edit <cr>
 " Insert ruby erb tags
 inoremap <Leader>= <%=  %><Esc>bhi
 inoremap <Leader>- <%  %><Esc>bhi
+
+" Go to the next line no matter what
+inoremap <S-j><S-j> <Esc>o
 
 " Faster than escape for insert mode
 inoremap jj <Esc>
