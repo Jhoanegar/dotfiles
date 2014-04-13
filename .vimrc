@@ -56,6 +56,9 @@ inoremap <S-j><S-j> <Esc>o
 " Faster than escape for insert mode
 inoremap jj <Esc>
 
+" Expand emmet abbreviation
+imap hh <C-y>,
+
 " Allow 256 colors
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
