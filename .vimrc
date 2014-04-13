@@ -62,10 +62,10 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 function! ToggleTypeOfNumbering()
-  if (&number == 1)
-    set relativenumber
+  if (&relativenumber == 1)
+    set norelativenumber
   else
-    set number
+    set relativenumber
   endif
 endfunction
 
