@@ -1,38 +1,5 @@
-set noexpandtab
-set autoindent 
-set tabstop=2 shiftwidth=2 expandtab
-set hlsearch
-retab
-colo jellybeans
-hi Normal ctermbg=NONE
-"Easier to reach in latin-american keyboards
-let mapleader="ñ"
-"Leader mappings
-"toggle comment
-map <Leader>c gcc
-"hlsearch
-map <Leader>h :set hlsearch! <cr>
-"Relative number
-map <Leader>n :call ToggleTypeOfNumbering() <cr>
-"Insert <%= >
-map <Leader>= i<C-g>s=
-inoremap jj <Esc>
-"Allow 256 colors
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-
-function! ToggleTypeOfNumbering()
-  if (&number == 1)
-    set relativenumber
-  else
-    set number
-  endif
-endfunction
-
-
-
 "Completition
+"
 
 let g:neocomplcache_enable_at_startup = 1
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
