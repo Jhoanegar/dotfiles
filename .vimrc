@@ -14,6 +14,11 @@ syntax on
 
 colo jellybeans
 
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+endif
+
 " Allow a transparent background
 hi Normal ctermbg=NONE
 
