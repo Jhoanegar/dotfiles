@@ -33,10 +33,10 @@ map <Leader>h :set hlsearch! <cr>
 map <Leader>n :call ToggleTypeOfNumbering() <cr>
 
 " Fugitive shortcuts"
-map <Leader>gs :Gstatus
-map <Leader>gc :Gcommit -am
+map <Leader>gs :Gstatus <cr>
+map <Leader>gc :Gcommit -am <cr>
 
-" Faster than escape 
+" Faster than escape
 inoremap jj <Esc>
 
 function! ToggleTypeOfNumbering()
