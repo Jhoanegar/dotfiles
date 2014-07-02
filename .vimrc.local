@@ -1,0 +1,2 @@
+" Disable unwanted plugins
+UnBundle "nathanaelkane/vim-indent-guides"
