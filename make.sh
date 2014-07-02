@@ -27,14 +27,14 @@ echo -n "Creating symbolic links ..."
 cd ~
 for file in $spfiles ; do
   if [[ -a $dir/$file ]]; then
-    mv $dir/$file $olddir/$file
+    cp $dir/$file $olddir/$file
   fi
   ln -s $dir/$file $spdir/$file
 done
 
 for file in $normalfiles ; do
   if [[ -a $dir/$file ]]; then
-    mv $dir/$file $olddir/$file
+    cp $dir/$file $olddir/$file
   fi
   ln -s $dir/$file ~/$file
 done
