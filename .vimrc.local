@@ -19,3 +19,6 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
+" Themes
+colorscheme 256-jungle
+autocmd VimEnter * AirlineTheme tomorrow
