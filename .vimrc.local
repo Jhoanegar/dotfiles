@@ -22,3 +22,27 @@ let g:airline_symbols.whitespace = 'Ξ'
 " Themes
 colorscheme 256-jungle
 autocmd VimEnter * AirlineTheme tomorrow
+
+" Leader related shortcuts
+let mapleader="ñ"
+
+" Toggle highlight of the search keyword
+map <Leader>h :set hlsearch! <cr>
+
+" Toggle between relative and absolut numbering
+map <Leader>n :call ToggleTypeOfNumbering() <cr>
+
+" Fugitive shortcuts"
+map <Leader>gs :Gstatus
+map <Leader>gc :Gcommit -am
+
+" Faster than escape 
+inoremap jj <Esc>
+
+function! ToggleTypeOfNumbering()
+  if (&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunction
