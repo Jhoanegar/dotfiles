@@ -8,13 +8,9 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files=""                          # list of files/folders to symlink in homedir
-
-# reading all the files inside the dotfiles directory
-for file in `ls -a $dir | grep -e "^\.[^\.].*$"`; do
-   files="$files $file"
-done
-##########
+spdir=~/.spf13-vim-3
+spfiles=".vimrc .vimrc.before .vimrc.bundles .vim"
+normalfiles=".vimrc.local .vimrc.bundles.local"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
@@ -27,9 +23,19 @@ cd $dir
 echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/$file
+echo -n "Creating symbolic links ..."
+cd ~
+for file in $spfiles ; do
+  if [[ -a $dir/$file ]]; then
+    mv $dir/$file $olddir/$file
+  fi
+  ln -s $dir/$file $spdir/$file
+done
+echo "done"
+
+for file in $normalfiles ; do
+  if [[ -a $dir/$file ]]; then
+    mv $dir/$file $olddir/$file
+  fi
+  ln -s $dir/$file ~/$file
 done
