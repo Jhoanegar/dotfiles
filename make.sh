@@ -9,7 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 spdir=~/.spf13-vim-3
-spfiles=".vimrc .vimrc.before .vimrc.bundles .vim"
+spfiles=".vimrc .vimrc.before .vimrc.bundles"
 normalfiles=".vimrc.local .vimrc.bundles.local"
 
 # create dotfiles_old in homedir
@@ -31,7 +31,6 @@ for file in $spfiles ; do
   fi
   ln -s $dir/$file $spdir/$file
 done
-echo "done"
 
 for file in $normalfiles ; do
   if [[ -a $dir/$file ]]; then
@@ -39,3 +38,5 @@ for file in $normalfiles ; do
   fi
   ln -s $dir/$file ~/$file
 done
+
+echo "done"
